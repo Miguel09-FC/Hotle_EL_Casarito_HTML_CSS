@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>HotelCasarito</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url("img/fondo.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        }
+        </style>
+        <div class="back">
+                        
+            <nav>
+                <a href="inicio.html">Inicio</a>
+                <a href="Precios.html">Precios</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="habitaciones.html">Habitaciones</a>
+                <a href="reservas.html">Reservas</a>
+            </nav>
+
+        </div>
+        <h2 class="slideshow">Especialidades del Hotel Casarito</h2>
+        <div class="container">
+            <div class="mySlides">
+              <div class="numbertext">1 / 5</div>
+              <img src="img/hotel.jpg" style="width:50%; padding-left: 25%;">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 5</div>
+              <img src="img/habitacion1.jpg" style="width:50%; padding-left: 25%;">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 5</div>
+              <img src="img/restaurantes.jpg" style="width:50%; padding-left: 25%;">
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">4 / 5</div>
+              <img src="img/visita.jpg" style="width:50%; padding-left: 25%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="img/fiestas.jpg" style="width:50%; padding-left: 25%;">
+            </div>
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="img/hotel.jpg" style="width:100%" onclick="currentSlide(1)" alt="Hotel Casarito">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img/habitacion1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Habitaciones modernas">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img/restaurantes.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gastronomía">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img/visita.jpg" style="width:100%" onclick="currentSlide(4)" alt="Iglesia Nª Señora De La Asunción">
+              </div>    
+              <div class="column">
+                <img class="demo cursor" src="img/fiestas.jpg" style="width:100%" onclick="currentSlide(5)" alt="Fiestas patronales">
+              </div>    
+            </div>
+          
+          <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          }
+          </script>
+
+          <br><br><br> <br><br>
+    
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    height:100%;
+    background-image: url("img/fondo.jpg");
+    font-family: Arial, Helvetica, sans-serif; 
+    
+    
+    
+}
+.contact_form {
+    width: 460px;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 16px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    background-color: #5dff80;
+    border: inset black;
+    transform: scale(.993, .94);
+    transition: transform.5s, opacity.25s; 
+    border-radius: 16px ;
+    border-bottom: 3px;
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.808);
+    opacity: 1;
+	 transform: scale(1);
+
+}
+
+
+textarea {
+    height: 150px;
+    width: 300px;
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border: inset black;
+    background: linear-gradient(21deg, #7cf3c1, #bbfab9);
+    opacity: 1;
+	  transform: scale(1); 
+    box-shadow: 3px 3px #000000;
+
+}
+
+button{
+    width: 420px;
+    height: 45px;
+    border-radius: 10px;
+    border-style: solid;
+    border: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;  
+    background: rgb(249, 249, 250);
+    border: 3px inset rgb(0, 0, 0);
+    background: linear-gradient(21deg, #7cf3c1, #bbfab9);
+
+}
+input{
+    border: inset black;
+    transition: ease-out;
+    background-color: white;
+    background: linear-gradient(21deg, #7cf3c1, #bbfab9);
+    opacity: 1;
+   	transform: scale(1);
+
+}
+nav{
+    width: 100%;
+    top: 25px;
+    text-align: right;
+    position: relative;
+    float: right;
+    right: 10px;
+    color: rgb(0, 0, 0);
+}
+nav a{
+    font-family: 'Oswald', sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#000000;
+    margin: 15px;
+    font-size:16px;
+    letter-spacing:1px;
+    position:relative;
+    display:inline-block;
+    border: solid rgb(33, 224, 26);
+    border-width: 5px;
+    background-color: rgb(33, 224, 26);
+    border-radius: 2px ;
+    box-shadow: 4px 5px 8px 0 rgb(0, 0, 0);
+
+  }
+  nav a:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:rgb(0, 0, 0);
+    top: 47%;
+    animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  }
+  nav a:hover:before{
+    animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  
+  }
+  @keyframes in{
+    0%{
+      width: 0;
+      left:0;
+      right:auto;
+    }
+    100%{
+      left:0;
+      right:auto;
+      width: 100%;
+    }
+  }
+  @keyframes out{
+    0%{
+      width:100%;
+      left: auto;
+      right: 0;
+    }
+    100%{
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+  @keyframes show{
+    0%{
+      opacity:0;
+      transform:translateY(-10px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  @for $i from 1 through 5 {
+    nav a:nth-child(#{$i}){
+      animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+  }
